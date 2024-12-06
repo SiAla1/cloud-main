@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier un Client</title>
+    <title>Gestion des Clients</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --background-color: #f4f6f7;
-            --text-color: #2c3e50;
-            --input-border-color: #e0e4e8;
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #00cec9;
+            --background-color: #f8f9fa;
+            --text-color: #2d3436;
+            --white-color: #ffffff;
+            --border-color: #dfe6e9;
+            --hover-color: #dcdde1;
         }
 
         * {
@@ -25,32 +27,32 @@
             font-family: 'Inter', Arial, sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             line-height: 1.6;
-            padding: 2rem 1rem;
+            padding: 2rem;
         }
 
-        .edit-container {
-            width: 100%;
-            max-width: 500px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 2rem;
+            background: var(--white-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .page-header {
             text-align: center;
             margin-bottom: 2rem;
-            color: var(--primary-color);
         }
 
         .page-header h1 {
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .form-group {
@@ -67,8 +69,8 @@
         .form-control {
             width: 100%;
             padding: 0.75rem;
-            border: 1px solid var(--input-border-color);
-            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
         }
@@ -83,9 +85,9 @@
             width: 100%;
             padding: 0.75rem;
             background-color: var(--accent-color);
-            color: white;
+            color: var(--white-color);
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
@@ -94,7 +96,7 @@
         }
 
         .btn:hover {
-            background-color: #2980b9;
+            background-color: #00b894;
         }
 
         .back-link {
@@ -113,7 +115,7 @@
         }
 
         @media (max-width: 600px) {
-            .edit-container {
+            .container {
                 width: 95%;
                 padding: 1.5rem;
             }
@@ -121,7 +123,7 @@
     </style>
 </head>
 <body>
-    <div class="edit-container">
+    <div class="container">
         <div class="page-header">
             <h1>Modifier le Client</h1>
         </div>

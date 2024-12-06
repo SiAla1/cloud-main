@@ -107,17 +107,17 @@
 <body>
     <div class="delete-container">
         <div class="page-header">
-            <h1>Confirmer la suppression</h1>
+            <h1 class="text-danger">Confirmation de suppression</h1>
         </div>
-
-        <p class="confirmation-message">
-            Êtes-vous sûr de vouloir supprimer ce client ? 
-            Cette action est définitive et ne peut pas être annulée.
+        
+        <p class="confirmation-message text-warning">
+            Êtes-vous sûr de vouloir supprimer ce client ?<br>
+            <strong>Attention :</strong> Cette action est définitive et irréversible.
         </p>
-
+        
         <form method="POST" action="/supprimer/{{ client_id }}" class="delete-form">
             <button type="submit" class="btn btn-delete">
-                Oui, supprimer le client
+                Supprimer ce client
             </button>
         </form>
 
